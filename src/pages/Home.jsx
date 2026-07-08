@@ -5,6 +5,10 @@ import '../styles/Home.css';   // Estilos específicos de esta página
 import ServiceCard from '../components/ServiceCards';
 import ArteRealLogo from '../assets/arte_real_logo.png'; // Tu logo cargado
 import PhotoCarousel from '../components/PhotoCarousel';
+import BusPublicitaria from '../assets/BusPublicitaria.jpg';
+import PublicidadExterior from '../assets/PublicidadExterior.png';
+import RotuloPublicitaria from '../assets/RotuloPublicitaria.jpeg';
+import VallaPublicitaria from '../assets/VallaPublicitaria.png';
 
 // 1. Importamos todas las imágenes de las carpetas assets
 const imagesBusMap = import.meta.glob('../assets/carrouselBus/*.{png,jpg,jpeg}', { eager: true });
@@ -46,7 +50,7 @@ export default function Home() {
           {/* Fondo de Ciudad con Valla */}
           <div className="absolute inset-0 z-0">
             <img
-              src="src/assets/PublicidadExterior.png"
+              src={PublicidadExterior}
               alt="Publicidad exterior"
               className="w-full h-full object-cover object-center"
             />
@@ -185,7 +189,7 @@ export default function Home() {
             {/* Servicio 1: Vallas */}
             <ServiceCard
               title="Vallas de Publicidad con Proyectos Especiales"
-              img="src/assets/VallaPublicitaria.png"
+              img={VallaPublicitaria}
               items={[
                 "Vallas tubulares de doble cara",
                 "Vallas tubulares con diseño troquelado",
@@ -202,7 +206,7 @@ export default function Home() {
             {/* Servicio 2: Móvil */}
             <ServiceCard
               title="Publicidad Móvil y Activaciones Urbanas"
-              img="src/assets/BusPublicitaria.jpg"
+              img={BusPublicitaria}
               items={[
                 "Publicidad en buses urbanos y taxis",
                 "Publicidad en sistema Ecovía",
@@ -219,7 +223,7 @@ export default function Home() {
             {/* Servicio 3: Gráfica */}
             <ServiceCard
               title="Rotulación e Imagen Corporativa"
-              img="src/assets/RotuloPublicitaria.jpeg"
+              img={RotuloPublicitaria}
               items={[
                 "Adhesivos industriales",
                 "Microperforados para ventanales",
