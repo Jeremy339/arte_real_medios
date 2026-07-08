@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-yellow: #facc15;
+  --color-brand-purple: #581c87;
+  --font-brand: "Inter", sans-serif;
+
+  /* 1. Mueve los @keyframes DENTRO del bloque @theme */
+  @keyframes scroll-infinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+/* 3. Clase de utilidad manual para asegurar el funcionamiento */
+.fila-animada {
+  display: flex;
+  width: max-content; /* Esencial: permite que la fila sea más ancha que la pantalla */
+  flex-wrap: nowrap;
+  animation: scroll-infinite 40s linear infinite;
+}
+
+.fila-animada:hover {
+  animation-play-state: paused;
+}
+
+/* Estilos de botones */
+.btn-primary {
+  @apply bg-brand-purple text-white px-6 py-2 rounded-full transition-all;
+}
+
+.btn-primary:hover {
+  @apply bg-brand-purple/90;
+}
